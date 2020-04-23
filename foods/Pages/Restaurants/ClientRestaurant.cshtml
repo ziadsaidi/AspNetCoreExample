@@ -1,0 +1,61 @@
+﻿@page
+@model ClientRestaurantModel
+@{
+
+}
+
+<h2> Client Restuarants </h2>
+
+<table  class="table" id="tableId"> 
+
+
+</table>
+
+
+@section Scripts {
+
+<environment include="Development">
+    <!--
+    <script src="~\node_modules\datatables.net\js\jquery.dataTables.js" ></script>
+    <script src="~\node_modules\datatables.net-bs\js\dataTables.bootstrap.js"></script>
+    <link rel="stylesheet" href="~\node_modules\datatables.net-bs\css\dataTables.bootstrap.css">
+    -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.20/datatables.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.20/datatables.min.js"></script>
+</environment>
+
+<environment  exclude="Development">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.20/datatables.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.20/datatables.min.js"></script>
+</environment>
+
+
+    <script>
+
+        $(function (){
+            $.ajax("/api/restaurant",{method:"get"})
+            .then(function(res){
+                $("#tableId").dataTable({
+                    data:res,
+                    columns:[
+                    {
+                        "data":"name"
+                    },
+                     {
+                        "data":"location"
+                    },
+                     {
+                        "data":"cuisine"
+                    },
+
+                    ]
+
+                });
+                 
+            })
+
+        });
+
+
+    </script>
+}

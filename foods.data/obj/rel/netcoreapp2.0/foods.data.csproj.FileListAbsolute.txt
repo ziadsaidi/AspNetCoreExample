@@ -1,0 +1,14 @@
+C:\Users\inov\Desktop\project\c#basics\foods.data\bin\rel\netcoreapp2.0\foods.data.deps.json
+C:\Users\inov\Desktop\project\c#basics\foods.data\bin\rel\netcoreapp2.0\foods.data.runtimeconfig.json
+C:\Users\inov\Desktop\project\c#basics\foods.data\bin\rel\netcoreapp2.0\foods.data.runtimeconfig.dev.json
+C:\Users\inov\Desktop\project\c#basics\foods.data\bin\rel\netcoreapp2.0\foods.data.dll
+C:\Users\inov\Desktop\project\c#basics\foods.data\bin\rel\netcoreapp2.0\foods.data.pdb
+C:\Users\inov\Desktop\project\c#basics\foods.data\bin\rel\netcoreapp2.0\foods.core.dll
+C:\Users\inov\Desktop\project\c#basics\foods.data\bin\rel\netcoreapp2.0\foods.core.pdb
+C:\Users\inov\Desktop\project\c#basics\foods.data\obj\rel\netcoreapp2.0\foods.data.csprojAssemblyReference.cache
+C:\Users\inov\Desktop\project\c#basics\foods.data\obj\rel\netcoreapp2.0\foods.data.csproj.CoreCompileInputs.cache
+C:\Users\inov\Desktop\project\c#basics\foods.data\obj\rel\netcoreapp2.0\foods.data.AssemblyInfoInputs.cache
+C:\Users\inov\Desktop\project\c#basics\foods.data\obj\rel\netcoreapp2.0\foods.data.AssemblyInfo.cs
+C:\Users\inov\Desktop\project\c#basics\foods.data\obj\rel\netcoreapp2.0\foods.data.csproj.CopyComplete
+C:\Users\inov\Desktop\project\c#basics\foods.data\obj\rel\netcoreapp2.0\foods.data.dll
+C:\Users\inov\Desktop\project\c#basics\foods.data\obj\rel\netcoreapp2.0\foods.data.pdb

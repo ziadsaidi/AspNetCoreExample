@@ -1,0 +1,9 @@
+C:\Users\inov\Desktop\project\c#basics\foods.core\bin\rel\netstandard2.0\foods.core.deps.json
+C:\Users\inov\Desktop\project\c#basics\foods.core\bin\rel\netstandard2.0\foods.core.dll
+C:\Users\inov\Desktop\project\c#basics\foods.core\bin\rel\netstandard2.0\foods.core.pdb
+C:\Users\inov\Desktop\project\c#basics\foods.core\obj\rel\netstandard2.0\foods.core.csprojAssemblyReference.cache
+C:\Users\inov\Desktop\project\c#basics\foods.core\obj\rel\netstandard2.0\foods.core.csproj.CoreCompileInputs.cache
+C:\Users\inov\Desktop\project\c#basics\foods.core\obj\rel\netstandard2.0\foods.core.AssemblyInfoInputs.cache
+C:\Users\inov\Desktop\project\c#basics\foods.core\obj\rel\netstandard2.0\foods.core.AssemblyInfo.cs
+C:\Users\inov\Desktop\project\c#basics\foods.core\obj\rel\netstandard2.0\foods.core.dll
+C:\Users\inov\Desktop\project\c#basics\foods.core\obj\rel\netstandard2.0\foods.core.pdb

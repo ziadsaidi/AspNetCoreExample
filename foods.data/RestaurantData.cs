@@ -7,7 +7,19 @@ namespace foods.data
     public interface IRestaurantData
     {
 
-    IEnumerable<Restaurant> getAll();
+    IEnumerable<Restaurant> GetRestaurantsByName(string name);
+    Restaurant GetById(int? id);
+
+    Restaurant Update (Restaurant updatedRestaurant);
+
+    Restaurant Create(Restaurant newRestaurant);
+
+
+    Restaurant Delete(int id);
+
+   //saveChanges()
+    int commit();
+    int GetRestaurantsCount();
 
     }
 }

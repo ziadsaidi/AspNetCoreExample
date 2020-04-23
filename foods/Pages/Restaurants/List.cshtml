@@ -4,22 +4,47 @@
 }
 
 
-<table class="table">
-@foreach (var r in Model.Restaurants)
-{
-    <tr>
-     <td>@r.Id</td>
-     <td> @r.Name</td>
-     <td>@r.Location</td>
-      <td> @r.Cuisine</td>
+<h1> Restaurants </h1>
 
-    </tr>
-    
-}
-</table>
-<div>
-<h1> @Model.Message  </h1>
+
+<form method="get">
+<div class="form-group">
+<div class="input-group">
+
+    <input asp-for="SearchTerm" type="search" class="form-control" />
+    <span class="input-group-btn">
+
+        <button class="btn btn-default">
+            <i class="glyphicon glyphicon-search" ></i>
+        </button>
+    </span>
 
 </div>
+
+</div>
+
+
+</form>
+
+
+@foreach (var r in Model.Restaurants){
+
+    <partial name="_Summary" model="r" />
+}
+
+
+<a asp-page="./Edit"  class='btn-btn-info' > Add New</a>
+
+
+
+@section footer{
+    <div>
+
+ @Model.Message  
+
+</div>
+
+}
+
 
 

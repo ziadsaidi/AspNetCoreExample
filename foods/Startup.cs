@@ -10,7 +10,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-
+using Microsoft.EntityFrameworkCore;
+using OdeToCode;
 
 namespace foods
 {
@@ -33,7 +34,11 @@ namespace foods
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddSingleton<IRestaurantData,InMemoryRestaurant>();
+            services.AddDbContextPool<FoodDbContext>(options =>{
+              options.UseSqlServer(Configuration.GetConnectionString("FoodDb"));
+            });
+
+            services.AddScoped<IRestaurantData,InMemoryRestaurant>();
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
@@ -49,14 +54,39 @@ namespace foods
             else
             {
                 app.UseExceptionHandler("/Error");
+                //access data only using secure connection
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
-            app.UseStaticFiles();
-            app.UseCookiePolicy();
+            app.Use(sayHelloMiddleware);
 
+            app.UseHttpsRedirection();
+
+            //response the data from wwwroot (images,css)
+            app.UseStaticFiles();
+
+            //track the use of cookies 
+            app.UseCookiePolicy();
+            
+            //Routing logic
             app.UseMvc();
+            //
+           // app.UseSpa()
+        }
+
+        private RequestDelegate sayHelloMiddleware(RequestDelegate next)
+        {
+            return async  ctx =>{
+                if(ctx.Request.Path.StartsWithSegments("/hello"))
+                {
+               await  ctx.Response.WriteAsync("Hello guys from my custom middleware!");
+
+                }
+               else
+               {
+                      await next(ctx);
+               }
+            };
         }
     }
 }

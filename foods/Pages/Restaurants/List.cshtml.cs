@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Configuration;
 using foods.core;
+using Microsoft.Extensions.Logging;
 
 namespace foods.Pages
 {
@@ -14,26 +15,30 @@ namespace foods.Pages
     {
         private readonly IConfiguration config;
         private readonly IRestaurantData data;
+        private readonly ILogger log;
 
-        public ListModel(IConfiguration config ,IRestaurantData data)
+        public ListModel(IConfiguration config, IRestaurantData data, ILogger<ListModel> log)
         {
             this.config = config;
             this.data = data;
+            this.log = log;
 
         }
+       
         public string Message { get; set; }
-        public IEnumerable<Restaurant>  Restaurants;
-        
+        public IEnumerable<Restaurant> Restaurants;
 
-   
+
+        [BindProperty(SupportsGet = true)]
+        public string SearchTerm { get; set; }
+
+
         public void OnGet()
         {
 
-        
-          
-
-           Message = config["Message"];
-           Restaurants = this.data.getAll();
+            log.LogError(config["Message"]);
+            Message = config["Message"];
+            Restaurants = this.data.GetRestaurantsByName(SearchTerm);
 
         }
     }

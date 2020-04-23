@@ -35,3 +35,10 @@ C:\Users\inov\Desktop\project\c#basics\foods\bin\Debug\netcoreapp2.1\foods.core.
 C:\Users\inov\Desktop\project\c#basics\foods\bin\Debug\netcoreapp2.1\foods.data.dll
 C:\Users\inov\Desktop\project\c#basics\foods\bin\Debug\netcoreapp2.1\foods.data.pdb
 C:\Users\inov\Desktop\project\c#basics\foods\bin\Debug\netcoreapp2.1\foods.core.pdb
+C:\Users\inov\Desktop\project\c#basics\foods\obj\Debug\netcoreapp2.1\Razor\Pages\Restaurants\Detail.g.cshtml.cs
+C:\Users\inov\Desktop\project\c#basics\foods\obj\Debug\netcoreapp2.1\Razor\Pages\Restaurants\NotFound.g.cshtml.cs
+C:\Users\inov\Desktop\project\c#basics\foods\obj\Debug\netcoreapp2.1\Razor\Pages\Restaurants\Edit.g.cshtml.cs
+C:\Users\inov\Desktop\project\c#basics\foods\obj\Debug\netcoreapp2.1\Razor\Pages\Restaurants\Delete.g.cshtml.cs
+C:\Users\inov\Desktop\project\c#basics\foods\obj\Debug\netcoreapp2.1\Razor\Pages\Restaurants\_Summary.g.cshtml.cs
+C:\Users\inov\Desktop\project\c#basics\foods\obj\Debug\netcoreapp2.1\Razor\Pages\Shared\Components\RestaurantCount\Default.g.cshtml.cs
+C:\Users\inov\Desktop\project\c#basics\foods\obj\Debug\netcoreapp2.1\Razor\Pages\Restaurants\ClientRestaurant.g.cshtml.cs
